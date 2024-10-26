@@ -1,0 +1,81 @@
+/* src/styles/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+
+@layer base {
+    body {
+        @apply bg-latte-cream text-coffee-brown;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded-full transition duration-300 ease-in-out;
+    }
+    .btn-primary {
+        @apply bg-coffee-brown text-white hover: bg-opacity-90;
+    }
+    .btn-secondary {
+        @apply bg-white text-coffee-brown border border-coffee-brown hover: bg-coffee-brown hover: text-white;
+    }
+}
+
+
+/* Custom animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Additional custom styles */
+
+.coffee-texture {
+    background-image: url('/coffee-texture.png');
+    background-repeat: repeat;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
